@@ -10,10 +10,7 @@ export default function Home() {
         {/* Navigation Bar */}
         <nav className="flex items-center justify-between p-4 brutal-border border-t-0 border-l-0 border-r-0 border-b-[3px]">
           <div className="flex items-center space-x-4">
-            <div className="w-12 h-12 brutal-border overflow-hidden bg-white">
-              <img src="/avatar.jpg" alt={site.name} className="w-full h-full object-cover" />
-            </div>
-            <span className="font-bold uppercase tracking-wider hidden md:block">HELLO. I&apos;M {site.name.toUpperCase()}</span>
+            <span className="font-bold uppercase tracking-wider">HELLO. I&apos;M {site.name.toUpperCase()}</span>
           </div>
           
           <div className="flex space-x-6 items-center">
@@ -63,10 +60,9 @@ export default function Home() {
               <h2 className="font-display text-3xl uppercase mb-6">TOOLS</h2>
               <div className="flex flex-wrap gap-4">
                 {tools.map((tool) => (
-                  <div key={tool} className="w-16 h-16 brutal-box rounded-full bg-pink flex items-center justify-center relative overflow-hidden group">
-                    {/* Simplified scalloped look using tailwind radius */}
+                  <div key={tool} className="min-w-[4rem] h-16 px-3 brutal-box rounded-full bg-pink flex items-center justify-center relative overflow-hidden group">
                     <div className="absolute inset-1 rounded-full border-2 border-dashed border-black opacity-30"></div>
-                    <span className="font-bold text-xs z-10 text-center leading-tight">{tool}</span>
+                    <span className="font-bold text-xs z-10 text-center leading-tight truncate">{tool}</span>
                   </div>
                 ))}
               </div>
